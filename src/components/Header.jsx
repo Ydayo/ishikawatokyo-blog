@@ -50,6 +50,7 @@ const Header = () => {
             ))}
           </ul>
         </div>
+
         <nav className="md:hidden flex w-full h-full items-center relative">
           <div className="mx-auto h-full flex items-center">
             <Link to="/" className="w-[160px] h-[40px]">
