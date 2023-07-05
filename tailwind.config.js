@@ -6,6 +6,7 @@ module.exports = {
     backgroundColor: {
       blue: "#0F172A",
       transparent: "rgba(255, 255, 255, 0.1)",
+      slate: "rgb(241 245 249)",
     },
     borderRadius: {
       xl: "50px",
