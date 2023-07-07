@@ -6,13 +6,13 @@ import close from "../img/close.png";
 const navLinks = [
   {
     id: 1,
-    url: "blog",
-    title: "Blog",
+    url: "",
+    title: "Home",
   },
   {
     id: 2,
-    url: "portfolio",
-    title: "Portfolio",
+    url: "blog",
+    title: "Blog",
   },
   {
     id: 3,
@@ -77,11 +77,11 @@ const Header = () => {
                 {navLinks.map((link) => (
                   <li
                     key={link.id}
-                    className="ml-3"
+                    className="ml-3 font-poppins font-medium"
                     onClick={() => setToggle(!toggle)}
                   >
                     <Link
-                      className="no-underline text-white font-semibold hover:opacity-70 duration-300"
+                      className="text-white hover:opacity-70 duration-300"
                       to={`/${link.url}`}
                     >
                       {link.title}
