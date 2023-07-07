@@ -1,14 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import drink from "../assets/what-item3.jpeg";
-import { Link } from "react-router-dom";
 import github from "../img/github.png";
-import starbucks from "../img/starbucks-blog.jpg";
+import external from "../img/external-link.png";
+import { Link } from "react-router-dom";
+
+const HostNumber = 3001;
 
 const HomeSection = [
   {
     id: 1,
-    image: drink,
+    src: `http://localhost:${HostNumber}/logo1/starbucks-blog.jpg`,
     date: "2023.3/20",
     text: [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
@@ -16,11 +17,11 @@ const HomeSection = [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
     ],
-    source: "https://github.com/Ydayo",
+    source: "https://ydayo.github.io/gibhub.io-starbucks/",
   },
   {
     id: 2,
-    src: "./public/logo1/what-item3.jpeg",
+    src: `http://localhost:${HostNumber}/logo1/bluebottole.jpg`,
     date: "2023.3/20",
     text: [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
@@ -28,10 +29,11 @@ const HomeSection = [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
     ],
+    source: "https://ydayo.github.io/blue-bottle/",
   },
   {
     id: 3,
-    src: "./public/logo1/what-item3.jpeg",
+    src: `http://localhost:${HostNumber}/logo1/golf-wang.jpg`,
     date: "2023.3/20",
     text: [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
@@ -39,10 +41,11 @@ const HomeSection = [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
     ],
+    source: "https://ydayo.github.io/golf.wang-clone/",
   },
   {
     id: 4,
-    src: "./public/logo1/what-item3.jpeg",
+    src: `http://localhost:${HostNumber}/logo1/instagram.jpg`,
     date: "2023.3/20",
     text: [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
@@ -50,6 +53,7 @@ const HomeSection = [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
     ],
+    source: "https://ydayo.github.io/github.io-instagram-clone/",
   },
 ];
 
@@ -86,16 +90,6 @@ const item = {
   },
 };
 
-// const subText = {
-//   // 変化する値
-//   hidden: { x: 100, opacity: 0 },
-//   // 変化後の値
-//   visible: {
-//     x: 0,
-//     opacity: 1,
-//   },
-// };
-
 const HomePage = () => {
   return (
     <div className="max-w-7xl mx-auto">
@@ -111,7 +105,7 @@ const HomePage = () => {
           delay: 0.3,
         }}
       >
-        <h1 className="text-center mb-7 text-5xl font-bold text-white mx-5">
+        <h1 className="text-center mb-7 text-[40px] font-bold text-white mx-5 font-poppins">
           Welcome!
         </h1>
       </motion.div>
@@ -124,7 +118,7 @@ const HomePage = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
-        <p className="text-white md:text-[20px] text-[17px] mx-5 text-center mb-7">
+        <p className="text-white md:text-[17px] text-[15px] mx-5 text-center mb-7">
           ようこそ Ishikawa Tokyoへ！
           <br />
           本サイトは、駆け出しエンジニアとしてBlogを一から作るという目的のもと
@@ -136,7 +130,7 @@ const HomePage = () => {
         </p>
       </motion.p>
       <motion.div
-        className="max-w-7xl h-auto bg-transparent rounded-xl mx-auto flex flex-wrap gap-7 p-5"
+        className="max-w-7xl h-auto bg-transparent rounded-xl flex flex-wrap gap-y-7 p-5"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -144,32 +138,31 @@ const HomePage = () => {
         {HomeSection.map((link) => (
           <motion.div
             key={link.id}
-            className="w-[500px] h-[600px] bg-blue m-auto gap-y-5 rounded-md relative"
+            className="w-[500px] h-[600px] bg-blue m-auto rounded-md relative"
             variants={item}
           >
             <div className="text-white absolute flex flex-col m-5 items-center">
               <img
-                className="rounded-md object-cover h-[300px]"
-                src={starbucks}
+                className="rounded-md object-cover h-[300px] cursor-pointer hover:opacity-80"
+                onClick={() => window.open(link.source, "_blank")}
+                src={link.src}
                 alt="drink"
                 width={450}
               />
               <p className="my-7">{link.date}</p>
               <p>{link.text}</p>
-              <Link
-                onClick={() =>
-                  window.open("https://github.com/Ydayo", "_blank")
-                }
-              >
-                <img
-                  className="cursor-pointer absolute top-3 right-4 rounded-xl bg-slate opacity-80"
-                  src={github}
-                  alt="github"
-                  width={50}
-                  height={50}
-                />
-              </Link>
             </div>
+            {/* <Link onClick={() => window.open(link.source, "_blank")}>
+              <div className="bg-white w-10 h-10 absolute top-7 right-8 cursor-pointer grid">
+                <img
+                  className="flex items-center justify-center"
+                  src={external}
+                  alt="external"
+                  width={33}
+                  height={33}
+                />
+              </div>
+            </Link> */}
           </motion.div>
         ))}
       </motion.div>
