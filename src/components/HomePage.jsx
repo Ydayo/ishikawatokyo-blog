@@ -4,7 +4,7 @@ import github from "../img/github.png";
 import external from "../img/external-link.png";
 import { Link } from "react-router-dom";
 
-const HostNumber = 3001;
+const HostNumber = 3000;
 
 const HomeSection = [
   {
@@ -138,19 +138,21 @@ const HomePage = () => {
         {HomeSection.map((link) => (
           <motion.div
             key={link.id}
-            className="w-[500px] h-[600px] bg-blue m-auto rounded-md relative"
+            className="w-[500px] sm:h-[600px] h-[500px] bg-blue m-auto rounded-md relative"
             variants={item}
           >
             <div className="text-white absolute flex flex-col m-5 items-center">
               <img
-                className="rounded-md object-cover h-[300px] cursor-pointer hover:opacity-80"
+                className="sm:rounded-md sm:object-cover object-contain sm:h-[300px] h-[170px] cursor-pointer hover:opacity-80"
                 onClick={() => window.open(link.source, "_blank")}
                 src={link.src}
                 alt="drink"
                 width={450}
               />
-              <p className="my-7">{link.date}</p>
-              <p>{link.text}</p>
+              <p className="sm:my-7 my-4 sm:text-[16px] text-[15px]">
+                {link.date}
+              </p>
+              <p className="sm:text-[16px] text-[15px]">{link.text}</p>
             </div>
             {/* <Link onClick={() => window.open(link.source, "_blank")}>
               <div className="bg-white w-10 h-10 absolute top-7 right-8 cursor-pointer grid">
