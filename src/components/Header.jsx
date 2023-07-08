@@ -81,7 +81,7 @@ const Header = () => {
                     onClick={() => setToggle(!toggle)}
                   >
                     <Link
-                      className="text-white hover:opacity-70 duration-300"
+                      className="text-white hover:opacity-90 duration-300"
                       to={`/${link.url}`}
                     >
                       {link.title}
