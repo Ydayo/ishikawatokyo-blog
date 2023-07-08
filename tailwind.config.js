@@ -8,7 +8,14 @@ module.exports = {
       transparent: "rgba(255, 255, 255, 0.1)",
       slate: "rgb(241 245 249)",
       white: "rgb(255, 255, 255)",
+      rose: "rgb(244, 63, 94)",
+      orange: "#EE9B01",
+      darkOrange: "#DA6A00",
     },
+    // colors: {
+    //   white: "#fff",
+    //   orange: "#DA6A00",
+    // },
     borderRadius: {
       xl: "50px",
       md: "20px",
@@ -16,6 +23,10 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
     },
+    // boxShadow: {
+    //   black: "0px 0px 22px -4px #c9c9c9",
+    //   white: "0px 0px 22px -4px #ffffff",
+    // },
   },
   plugins: [],
 };
