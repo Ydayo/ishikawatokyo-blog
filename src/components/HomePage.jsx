@@ -109,7 +109,7 @@ const HomePage = () => {
           Welcome!
         </h1>
       </motion.div>
-      <motion.p
+      {/* <motion.p
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -128,7 +128,7 @@ const HomePage = () => {
           <br />
           趣味や気になっている事を掲載できたらなと思っています！
         </p>
-      </motion.p>
+      </motion.p> */}
       <motion.div
         className="max-w-7xl h-auto bg-transparent rounded-xl flex flex-wrap gap-y-7 p-5"
         variants={container}
