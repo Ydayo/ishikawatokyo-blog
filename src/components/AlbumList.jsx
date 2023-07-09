@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { blogs } from "../constants";
 import { Pagination } from "react-pagination-bar";
 import "react-pagination-bar/dist/index.css";
-import { getBlogs } from "../libs/microcms";
 
-// const response = await getBlogs({ fields: ["id", "title"] });
 const AlbumList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const pagePostsLimit = 6;
@@ -14,19 +12,21 @@ const AlbumList = () => {
       {blogs
         .slice((currentPage - 1) * pagePostsLimit, currentPage * pagePostsLimit)
         .map((blog, idx) => (
-          <div key={idx} className="bg-rose h-[400px] w-[400px]">
+          <a
+            onClick={() => window.open(blog.source)}
+            key={idx}
+            className="shadow-xl shadow-cyan-700 h-[400px] w-[400px] p-3 flex flex-col justify-center items-center text-white hover:shadow-none duration-300 cursor-pointer"
+          >
             <img
               src={blog.image}
               alt="blog"
-              width={350}
-              height={300}
-              // currentblogs={currentBlogs}
+              className="w-[350px] h-[300] object-cover"
             />
-            <p>{blog.title}</p>
+            <p className="my-6 font-bold">{blog.title}</p>
             <p>{blog.desc}</p>
-          </div>
+          </a>
         ))}
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center mt-10">
         <Pagination
           currentPage={currentPage}
           itemsPerPage={pagePostsLimit}
@@ -35,14 +35,6 @@ const AlbumList = () => {
           pageNeighbours={2}
         />
       </div>
-      {/* {response.contents.map((blog) => (
-        <div>
-          {blog.image}
-          <a href={blog.id} className="text-white">
-            {blog.title}
-          </a>
-        </div>
-      ))} */}
     </div>
   );
 };
