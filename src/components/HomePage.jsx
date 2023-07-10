@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HomeSection } from "../constants";
+import { HomeSection, skillSec } from "../constants";
 
 const container = {
   // 変化する値
@@ -38,6 +38,7 @@ const item = {
 const HomePage = () => {
   return (
     <div className="max-w-7xl mx-auto">
+      {/* Skill Section */}
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -46,12 +47,36 @@ const HomePage = () => {
           delay: 0.3,
         }}
       >
-        <h1 className="text-center mb-7 text-[40px] font-bold text-white mx-5 font-poppins">
-          Welcome!
+        <h1 className="text-center mb-7 text-[40px] font-bold mx-5 font-poppins text-orange-500">
+          Skill
+        </h1>
+      </motion.div>
+      <ul className="flex flex-wrap gap-7 justify-center mb-12">
+        {skillSec.map((link, idx) => (
+          <li
+            key={idx}
+            className="bg-white text-white min-w-[200px] basis-1/3 text-center rounded-md flex justify-center items-center p-3 min-h-[150px]"
+          >
+            <img src={link.icon} alt="" width={130} />
+          </li>
+        ))}
+      </ul>
+
+      {/* Portfoilo Section */}
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.5,
+          delay: 0.3,
+        }}
+      >
+        <h1 className="text-center mb-7 text-[40px] font-bold mx-5 font-poppins text-orange-500">
+          Portfolio
         </h1>
       </motion.div>
       <motion.div
-        className="max-w-7xl h-auto bg-transparent rounded-xl flex flex-wrap gap-y-7 p-5"
+        className="max-w-7xl h-auto rounded-xl flex flex-wrap gap-y-7 p-5"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -59,7 +84,7 @@ const HomePage = () => {
         {HomeSection.map((link) => (
           <motion.div
             key={link.id}
-            className="w-[500px] sm:h-[600px] h-[500px] bg-blue m-auto rounded-md relative"
+            className="w-[500px] sm:h-[600px] h-[500px] bg-blue mx-auto mb-5 rounded-md relative shadow-xl shadow-cyan-700"
             variants={item}
           >
             <div className="text-white absolute flex flex-col m-5 items-center">
