@@ -28,7 +28,7 @@ const Contact = () => {
               className="w-full p-2 text-[14px] border-solid border-sky-700 border-2 mb-4 outline-none"
             />
             <label htmlFor="textarea" className="block text-[14px] mb-1">
-              Descripition
+              Message
             </label>
             <textarea
               id="text"
