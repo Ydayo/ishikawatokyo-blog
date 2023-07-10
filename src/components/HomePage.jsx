@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { HomeSection, skillSec } from "../constants";
+import Github from "../img/github.png";
 
 const container = {
   // 変化する値
@@ -103,6 +104,21 @@ const HomePage = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      {/* github more */}
+      <div className="flex justify-center my-12">
+        <div className="flex justify-center items-center">
+          <a
+            href="https://github.com/Ydayo"
+            className="bg-white rounded-full w-[110px] h-[110px] flex justify-center items-center hover:bg-transparent2 duration-300"
+          >
+            <img src={Github} alt="" width={100} className="rounded-full" />
+          </a>
+          <h1 className="ml-3 text-orange-500 font-bold text-[20px]">
+            My Github
+          </h1>
+        </div>
+      </div>
     </div>
   );
 };
