@@ -21,6 +21,7 @@ module.exports = {
     borderRadius: {
       xl: "50px",
       md: "20px",
+      full: "50%",
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
