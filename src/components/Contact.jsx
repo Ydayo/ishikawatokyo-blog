@@ -1,45 +1,16 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 
-const inputLabel = [
-  {
-    id: "name",
-    name: "Name",
-    errmes: "Nameは必須です。",
-  },
-  {
-    id: "email",
-    name: "Email",
-    errmes: "Emailは必須です。",
-  },
-  {
-    id: "password",
-    name: "Password",
-    errmes: "Passwordは必須です。",
-  },
-];
-
-const inputTitle = "Log In";
+const inputTitle = "Demo Contact";
 
 const submitTitle = "Sending";
 
 const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
-
   return (
     <>
-      <div className="w-full h-screen flex items-center justify-center">
-        <div className="bg-white p-7 rounded-md max-w-sm w-full">
+      <div className="w-full h-screen flex items-center justify-center px-3">
+        <div className="bg-white p-7 rounded-md max-w-md w-full">
           <h1 className="text-center text-rose-500 font-bold">{inputTitle}</h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form>
             <label htmlFor="name" className="block text-[14px] mb-1">
               Name
             </label>
@@ -47,13 +18,6 @@ const Contact = () => {
               id="name"
               type="name"
               className="w-full p-2 text-[14px] border-solid border-sky-700 border-2 mb-4 outline-none"
-              {...register("name", {
-                required: "namaehahissudesu",
-                minLength: {
-                  value: 4,
-                  message: "4文字以上で入力してください。",
-                },
-              })}
             />
             <label htmlFor="email" className="block text-[14px] mb-1">
               Email
@@ -62,16 +26,14 @@ const Contact = () => {
               id="email"
               type="email"
               className="w-full p-2 text-[14px] border-solid border-sky-700 border-2 mb-4 outline-none"
-              {...register("email", { required: "namaehahissudesu" })}
             />
-            <label htmlFor="password" className="block text-[14px] mb-1">
-              Password
+            <label htmlFor="textarea" className="block text-[14px] mb-1">
+              Descripition
             </label>
-            <input
-              id="password"
-              type="password"
-              className="w-full p-2 text-[14px] border-solid border-sky-700 border-2 mb-4 outline-none"
-              {...register("password", { required: "namaehahissudesu" })}
+            <textarea
+              id="text"
+              type="text"
+              className="w-full p-2 text-[14px] border-solid border-sky-700 border-2 mb-4 outline-none h-[200px]"
             />
             <button
               type="submit"

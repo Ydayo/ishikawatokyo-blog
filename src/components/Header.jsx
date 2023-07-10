@@ -2,24 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import menu from "../img/menu-blue.png";
 import close from "../img/close.png";
-
-const navLinks = [
-  {
-    id: 1,
-    url: "",
-    title: "Home",
-  },
-  {
-    id: 2,
-    url: "blog",
-    title: "Blog",
-  },
-  {
-    id: 3,
-    url: "contact",
-    title: "Contact",
-  },
-];
+import { navLinks } from "../constants";
 
 const Header = () => {
   const [toggle, setToggle] = useState(true);
@@ -62,7 +45,7 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className="absolute right-3 top-6 w-8 h-8 text-white cursor-pointer">
+          <div className="absolute right-3 top-6 w-8 h-8 cursor-pointer text-white">
             <img
               src={toggle ? menu : close}
               alt="menu"
@@ -73,19 +56,14 @@ const Header = () => {
                 toggle ? "hidden" : "flex"
               } p-6 bg-gradient-to-r from-sky-800 to-indigo-900 absolute top-14 right-0 min-w-[140px] z-10 rounded-md`}
             >
-              <ul className="flex justify-end items-start flex-col gap-4 text-center">
+              <ul className="flex justify-end items-start flex-col gap-4 text-center text-white hover:text-orange-500 duration-300">
                 {navLinks.map((link) => (
                   <li
                     key={link.id}
-                    className="ml-3 font-poppins font-medium"
+                    className="ml-3"
                     onClick={() => setToggle(!toggle)}
                   >
-                    <Link
-                      className="text-white hover:opacity-90 duration-300"
-                      to={`/${link.url}`}
-                    >
-                      {link.title}
-                    </Link>
+                    <Link to={`/${link.url}`}>{link.title}</Link>
                   </li>
                 ))}
               </ul>
