@@ -2,7 +2,8 @@ const HostNumber = 3000;
 
 export const blogs = [
   {
-    image: `http://localhost:${HostNumber}/logo1/ishikawatokyo.jpg`,
+    image:
+      "https://main--ishikawatokyo-blog.netlify.app/logo1/ishikawatokyo.jpg",
     title: "Reactで技術ブログ作ってみた",
     desc: [
       "初めて自作でブログを作ってみました。",
@@ -49,7 +50,7 @@ export const blogs = [
 export const HomeSection = [
   {
     id: 1,
-    src: `http://localhost:${HostNumber}/logo1/starbucks-blog.jpg`,
+    src: "https://main--ishikawatokyo-blog.netlify.app/logo1/starbucks-blog.jpg",
     date: "2023.3/20",
     text: [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
@@ -61,7 +62,7 @@ export const HomeSection = [
   },
   {
     id: 2,
-    src: `http://localhost:${HostNumber}/logo1/bluebottole.jpg`,
+    src: "https://main--ishikawatokyo-blog.netlify.app/logo1/bluebottole.jpg",
     date: "2023.3/20",
     text: [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
@@ -73,7 +74,7 @@ export const HomeSection = [
   },
   {
     id: 3,
-    src: `http://localhost:${HostNumber}/logo1/golf-wang.jpg`,
+    src: "https://main--ishikawatokyo-blog.netlify.app/logo1/golf-wang.jpg",
     date: "2023.3/20",
     text: [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
@@ -85,7 +86,7 @@ export const HomeSection = [
   },
   {
     id: 4,
-    src: `http://localhost:${HostNumber}/logo1/instagram.jpg`,
+    src: "https://main--ishikawatokyo-blog.netlify.app/logo1/instagram.jpg",
     date: "2023.3/20",
     text: [
       "こちらの文はデモになります。こちらの文はデモになります。こちらの文はデモになります。",
