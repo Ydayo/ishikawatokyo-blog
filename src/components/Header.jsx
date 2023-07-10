@@ -24,7 +24,7 @@ const Header = () => {
             {navLinks.map((link) => (
               <li key={link.id} className="ml-7">
                 <Link
-                  className="no-underline text-white font-light hover:opacity-70 duration-300"
+                  className="no-underline text-white font-medium hover:text-orange-500 duration-300"
                   to={`/${link.url}`}
                 >
                   {link.title}
@@ -56,11 +56,11 @@ const Header = () => {
                 toggle ? "hidden" : "flex"
               } p-6 bg-gradient-to-r from-sky-800 to-indigo-900 absolute top-14 right-0 min-w-[140px] z-10 rounded-md`}
             >
-              <ul className="flex justify-end items-start flex-col gap-4 text-center text-white hover:text-orange-500 duration-300">
+              <ul className="flex justify-end items-start flex-col gap-4 text-center">
                 {navLinks.map((link) => (
                   <li
                     key={link.id}
-                    className="ml-3"
+                    className="ml-3 text-white hover:text-orange-500 duration-300"
                     onClick={() => setToggle(!toggle)}
                   >
                     <Link to={`/${link.url}`}>{link.title}</Link>
