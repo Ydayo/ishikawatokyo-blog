@@ -9,40 +9,40 @@ export const blogs = [
       "React,Tailwindcss,Vercelを使用し拙いところもありますが",
       "ぜひ自作Blogを作りたいなと思っている方は参考にしてみてください。",
     ],
-    source: "https://ydayo.github.io/gibhub.io-starbucks/",
+    source: "https://ydayo.github.io/blog-product-desc/",
   },
   {
-    title: "準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "t準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "t準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "準備中",
+    title: "準備中(no Click)",
   },
   {
-    title: "t準備中",
+    title: "準備中(no Click)",
   },
 ];
 
