@@ -99,7 +99,9 @@ const HomePage = () => {
               <p className="sm:my-7 my-4 sm:text-[16px] text-[15px]">
                 {link.date}
               </p>
-              <p className="sm:text-[16px] text-[15px]">{link.text}</p>
+              <p className="sm:text-[16px] text-[15px] tracking-wider">
+                {link.text}
+              </p>
             </div>
           </motion.div>
         ))}
