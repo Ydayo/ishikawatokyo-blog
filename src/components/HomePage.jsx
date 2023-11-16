@@ -111,7 +111,7 @@ const HomePage = () => {
       <div className="flex justify-center my-12">
         <div className="flex justify-center items-center">
           <a
-            href="https://github.com/Ydayo"
+            href="#id"
             className="bg-white rounded-full w-[110px] h-[110px] flex justify-center items-center hover:bg-transparent2 duration-300"
           >
             <img src={Github} alt="" width={100} className="rounded-full" />
