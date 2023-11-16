@@ -48,7 +48,8 @@ export const blogs = [
       "React,Tailwindcss,Vercelを使用し拙いところもありますが",
       "ぜひ自作Blogを作りたいなと思っている方は参考にしてみてください。",
     ],
-    source: "https://ydayo.github.io/blog-product-desc/",
+    // source: "https://ydayo.github.io/blog-product-desc/",
+    source: "#id",
   },
   {
     title: "準備中(no Click)",
@@ -89,54 +90,51 @@ export const HomeSection = [
   {
     id: 1,
     src: "https://ishikawatokyo-blog.netlify.app/logo1/starbucks-blog.jpg",
-    date: "2023.3/20",
+    date: "XXXX/XX/XX",
     text: [
       "Starbucksのクローンサイトを作りました。使用技術はHTML,CSS,Javascriptです。",
       "swiper.jsというライブラリを導入しており、初心者でも簡単にslideanimationを",
       "作ることができますと思います。レスポンシブ対応もしており、色々な端末で見てもスタイル",
       "が崩れないようになっています。Githubにソースコードを載せているので覗いてみてください。",
     ],
-    source: "https://ydayo.github.io/gibhub.io-starbucks/",
+    // source: "https://ydayo.github.io/gibhub.io-starbucks/",
+    source: "#id",
   },
   {
     id: 2,
     src: "https://ishikawatokyo-blog.netlify.app/logo1/bluebottole.jpg",
-    date: "2023.3/20",
+    date: "XXXX/XX/XX",
     text: [
       "今回クローン作成したサイトはBluebottolecoffeeというcafeのWebサイトを作成しました。",
       "画像の切り替えはCSSではなく、Javascriptを使用して画像を切り替えています。レスポンシブ",
       "にも対応しており、styleが崩れないようになっています。割とシンプルにコードを書けるので",
       "初心者の方は挑戦しやすいと思います。",
     ],
-    source: "https://ydayo.github.io/blue-bottle/",
+    // source: "https://ydayo.github.io/blue-bottle/",
+    source: "#id",
   },
   {
     id: 3,
     src: "https://ishikawatokyo-blog.netlify.app/logo1/golf-wang.jpg",
-    date: "2023.3/20",
-    text: [
-      "今回作成したサイトはGolf Wangというサイトです。海外ブランドのファッションサイトで",
-      "とても人気のブランドになります。(私も好きなブランドです！) Tyler the creatorという",
-      "アーティストが手掛けています。また、こちらのサイトも構造がシンプルで初心者にとってとても",
-      "作りやすいと思います。",
-    ],
-    source: "https://ydayo.github.io/golf.wang-clone/",
+    date: "XXXX/XX/XX",
+    text: `今回作成したサイトはGolf Wangというサイトです。海外ブランドのファッションサイトで
+      とても人気のブランドになります。(私も好きなブランドです！) Tyler the creatorという
+      アーティストが手掛けています。また、こちらのサイトも構造がシンプルで初心者にとってとても
+      作りやすいと思います。
+    `,
+    // source: "https://ydayo.github.io/golf.wang-clone/",
+    source: "#id",
   },
   {
     id: 4,
     src: "https://ishikawatokyo-blog.netlify.app/logo1/instagram.jpg",
-    date: "2023.3/20",
-    // text: [
-    //   "今回はinstagramのログイン画面を作成しました。CSSで画像の切り替えをしていて、構造自体は",
-    //   "すごい単純ですが少し難しいかもしれません。しかし、animationやrelativeやabsoluteを学びたい",
-    //   "人は学べることがあると思います。数あるクローンサイトの内似ている度合いはトップクラスにあると",
-    //   "思います。ぜひソースコードを覗いてみてください。",
-    // ],
+    date: "XXXX/XX/XX",
     text: `今回はinstagramのログイン画面を作成しました。CSSで画像の切り替えをしていて、構造自体は
       すごい単純ですが少し難しいかもしれません。しかし、animationやrelativeやabsoluteを学びたい
       人は学べることがあると思います。数あるクローンサイトの内似ている度合いはトップクラスにあると
       思います。ぜひソースコードを覗いてみてください。`,
 
-    source: "https://ydayo.github.io/github.io-instagram-clone/",
+    // source: "https://ydayo.github.io/github.io-instagram-clone/",
+    source: "#id",
   },
 ];
