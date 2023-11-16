@@ -30,6 +30,7 @@ const AlbumList = () => {
           )
           .map((blog, idx) => (
             <a
+              href="/"
               onClick={() => window.open(blog.source)}
               key={idx}
               className="shadow-xl shadow-cyan-700 h-[400px] w-[400px] p-3 flex flex-col justify-center items-center text-white hover:shadow-none duration-300 cursor-pointer"
