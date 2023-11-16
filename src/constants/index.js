@@ -1,4 +1,4 @@
-const HostNumber = 3000;
+export const HostNumber = 3000;
 
 export const navLinks = [
   {
@@ -126,12 +126,17 @@ export const HomeSection = [
     id: 4,
     src: "https://ishikawatokyo-blog.netlify.app/logo1/instagram.jpg",
     date: "2023.3/20",
-    text: [
-      "今回はinstagramのログイン画面を作成しました。CSSで画像の切り替えをしていて、構造自体は",
-      "すごい単純ですが少し難しいかもしれません。しかし、animationやrelativeやabsoluteを学びたい",
-      "人は学べることがあると思います。数あるクローンサイトの内似ている度合いはトップクラスにあると",
-      "思います。ぜひソースコードを覗いてみてください。",
-    ],
+    // text: [
+    //   "今回はinstagramのログイン画面を作成しました。CSSで画像の切り替えをしていて、構造自体は",
+    //   "すごい単純ですが少し難しいかもしれません。しかし、animationやrelativeやabsoluteを学びたい",
+    //   "人は学べることがあると思います。数あるクローンサイトの内似ている度合いはトップクラスにあると",
+    //   "思います。ぜひソースコードを覗いてみてください。",
+    // ],
+    text: `今回はinstagramのログイン画面を作成しました。CSSで画像の切り替えをしていて、構造自体は
+      すごい単純ですが少し難しいかもしれません。しかし、animationやrelativeやabsoluteを学びたい
+      人は学べることがあると思います。数あるクローンサイトの内似ている度合いはトップクラスにあると
+      思います。ぜひソースコードを覗いてみてください。`,
+
     source: "https://ydayo.github.io/github.io-instagram-clone/",
   },
 ];
