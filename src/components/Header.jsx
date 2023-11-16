@@ -12,12 +12,13 @@ const Header = () => {
         <div className="max-md:hidden max-w-7xl w-full h-full mx-auto flex justify-between items-center px-5">
           <div>
             <Link to="/" className="w-[200px] h-[50px]">
-              <img
+              {/* <img
                 src="./logo1/ishikawa-tokyo-white-transparent.png"
                 alt=""
                 width={180}
                 height={50}
-              />
+              /> */}
+              <h1>BlogTitle</h1>
             </Link>
           </div>
           <ul className="flex">
